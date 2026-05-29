@@ -1,108 +1,20 @@
 # 半导体知识图谱：构建、推理与大模型增强
 
-> 电子信息研究生课程作业 | 知识图谱领域 | GraphRAG 实践
+> 电子信息研究生课程作业 · 知识图谱 · GraphRAG 实践
 
 ---
 
 ## 项目简介
 
-本项目构建了一个**半导体与芯片技术**领域的知识图谱系统，包含：
-- **知识图谱构建**：110个实体、318条三元组、8类实体、16类关系
-- **知识推理**：规则推理（7条Horn规则）+ 路径推理（BFS多跳）+ 链接预测
-- **大模型增强（GraphRAG）**：图谱检索 → Prompt增强 → 对比问答 + 幻觉检测
+本项目围绕**半导体与芯片技术**领域，构建了一个完整的知识图谱系统，包含三个核心模块：
 
-覆盖全球主流芯片厂商（Intel/AMD/NVIDIA/TSMC/Apple/高通等）、旗舰芯片、制造工艺、材料、架构等核心知识。
+| 模块 | 说明 |
+|------|------|
+| **图谱构建** | 110 个实体、318 条三元组、8 类实体类型、16 类关系类型 |
+| **知识推理** | 规则推理（7条 Horn 规则）+ 路径推理（双向 BFS 多跳）|
+| **GraphRAG** | 图谱子图检索 → Prompt 注入 → 有/无 KG 问答对比 + 幻觉检测 |
 
----
-
-## 环境要求
-
-- Python 3.9 及以上
-- 操作系统：Windows / macOS / Linux
-
----
-
-## 快速开始
-
-### 第一步：克隆项目
-
-```bash
-git clone https://github.com/你的用户名/你的仓库名.git
-cd KnowledgeGraph_for_IC
-```
-
-### 第二步：安装依赖
-
-```bash
-pip install -r requirements.txt
-```
-
-依赖项说明：
-
-| 库 | 用途 |
-|----|------|
-| `networkx` | 知识图谱存储与图算法 |
-| `pyvis` | 交互式HTML图谱可视化 |
-| `matplotlib` | 静态图表生成 |
-| `pandas` | 数据处理 |
-| `openai` | DeepSeek / OpenAI API调用（可选）|
-
-### 第三步：运行项目
-
-**方式A：一键运行所有模块（推荐）**
-
-```bash
-# 模拟模式（无需API，直接运行）
-python -X utf8 run_all.py --simulate
-
-# 真实大模型模式（需要DeepSeek API Key）
-python -X utf8 run_all.py --api-key sk-你的key
-
-# 跳过可视化（更快）
-python -X utf8 run_all.py --simulate --skip-viz
-```
-
-**方式B：分步骤运行**
-
-```bash
-# 1. 构建知识图谱
-python -X utf8 src/build_kg.py
-
-# 2. 知识推理（规则 + 路径）
-python -X utf8 src/reasoning.py
-
-# 3. 大模型增强问答
-python -X utf8 src/llm_qa.py --simulate        # 模拟模式
-python -X utf8 src/llm_qa.py --api-key sk-xxx  # 真实API
-
-# 4. 综合评估
-python -X utf8 src/evaluate.py
-
-# 5. 生成可视化
-python -X utf8 src/visualize.py
-```
-
----
-
-## 配置 DeepSeek API（可选但推荐）
-
-1. 注册账号：https://platform.deepseek.com/
-2. 充值（1元即可）并创建 API Key
-3. 配置环境变量：
-
-**Windows PowerShell：**
-```powershell
-$env:DEEPSEEK_API_KEY = "sk-你的key"
-python -X utf8 run_all.py
-```
-
-**macOS / Linux：**
-```bash
-export DEEPSEEK_API_KEY="sk-你的key"
-python -X utf8 run_all.py
-```
-
-> 不配置也完全没问题，系统会自动使用模拟模式运行。
+覆盖 Intel、AMD、NVIDIA、TSMC、Apple、高通等主流厂商，H100、A17 Pro、骁龙 8 Gen 3 等旗舰芯片，以及 3nm/4nm/5nm 等关键制造工艺。
 
 ---
 
@@ -110,99 +22,190 @@ python -X utf8 run_all.py
 
 ```
 KnowledgeGraph/
-├── README.md                   # 本文件
-├── requirements.txt            # Python依赖
-├── run_all.py                  # 一键运行脚本
-├── .gitignore                  # Git忽略规则
+├── README.md                    # 本文件
+├── requirements.txt             # Python 依赖
+├── run_all.py                   # 一键运行所有模块
+├── .gitignore
 │
 ├── data/
-│   ├── raw/
-│   │   ├── entities.csv        # 110个实体定义（手工整理）
-│   │   └── triples.csv         # 318条三元组（手工整理）
-│   ├── processed/              # 运行后自动生成，已被.gitignore忽略
-│   └── triples.csv             # 运行后自动生成，已被.gitignore忽略
+│   └── raw/
+│       ├── entities.csv         # 110 个实体（人工整理）
+│       └── triples.csv          # 318 条三元组（人工整理）
 │
 ├── src/
-│   ├── build_kg.py             # 知识图谱构建
-│   ├── reasoning.py            # 知识推理（规则 + 路径 + 链接预测）
-│   ├── graph_retrieval.py      # 子图检索（为GraphRAG提供上下文）
-│   ├── llm_qa.py               # 大模型增强问答（GraphRAG）
-│   ├── evaluate.py             # 综合评估
-│   └── visualize.py            # 图谱可视化
+│   ├── build_kg.py              # 图谱构建与存储
+│   ├── reasoning.py             # 规则推理 + 路径推理
+│   ├── graph_retrieval.py       # 子图检索（GraphRAG 基础）
+│   ├── llm_qa.py                # 大模型增强问答
+│   ├── evaluate.py              # 综合评估（检索/推理/幻觉）
+│   └── visualize.py             # pyvis 交互式可视化
 │
 ├── prompts/
-│   └── kg_augmented_prompt.txt # GraphRAG Prompt模板
+│   └── kg_augmented_prompt.txt  # GraphRAG Prompt 模板
 │
-└── results/
-    └── cases.md                # 问答案例对比分析（手写）
-    # 以下文件在运行后自动生成：
-    # kg_full.html              交互式图谱（浏览器打开）
-    # kg_static.png             静态图谱图片
-    # kg_statistics.png         统计图表
-    # metrics.json              评估指标
-    # qa_results.json           问答结果
-    # reasoning_results.json    推理结果
+├── results/
+│   └── cases.md                 # 问答案例对比分析（手写）
+│   # 以下文件运行后自动生成，不在仓库中：
+│   # kg_full.html / kg_static.png / metrics.json / qa_results.json ...
+│
+└── docs/
+    ├── 课程报告.md               # 课程报告正文
+    ├── 课程PPT.pptx              # 课程汇报幻灯片（11页）
+    ├── 项目答疑纪要.md           # 常见问题整理
+    └── gen_ppt.py               # PPT 生成脚本
+```
+
+---
+
+## 快速开始
+
+### 1. 克隆仓库
+
+```bash
+git clone https://github.com/Varugnis/KnowledgeGraph_for_IC.git
+cd KnowledgeGraph_for_IC
+```
+
+### 2. 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 运行（无需 API Key）
+
+```bash
+# Windows
+python -X utf8 run_all.py --simulate
+
+# macOS / Linux
+python run_all.py --simulate
+```
+
+运行完成后查看生成文件：
+
+- **`results/kg_full.html`** — 在浏览器中打开，交互式拖拽查看知识图谱
+- **`results/kg_static.png`** — 静态图谱图片
+- **`results/metrics.json`** — 评估指标（幻觉检测、路径推理准确率等）
+- **`results/qa_results.json`** — 10 个测试问题的有/无 KG 双路回答
+
+---
+
+## 使用 DeepSeek API（可选）
+
+配置后可获得真实的"有 KG vs 无 KG"大模型问答对比效果。
+
+1. 注册 [platform.deepseek.com](https://platform.deepseek.com/)，充值 1 元并创建 API Key。
+2. 设置环境变量后运行：
+
+```bash
+# Windows PowerShell
+$env:DEEPSEEK_API_KEY = "sk-你的key"
+python -X utf8 run_all.py
+
+# macOS / Linux
+export DEEPSEEK_API_KEY="sk-你的key"
+python run_all.py
+```
+
+> 未配置 API Key 时系统自动使用**规则模拟模式**，图谱构建、推理、评估模块不受影响。
+
+---
+
+## 分模块运行
+
+```bash
+# 仅构建图谱
+python -X utf8 src/build_kg.py
+
+# 仅运行推理（规则 + 路径）
+python -X utf8 src/reasoning.py
+
+# 仅问答对比
+python -X utf8 src/llm_qa.py --simulate
+
+# 仅综合评估
+python -X utf8 src/evaluate.py
+
+# 仅生成可视化
+python -X utf8 src/visualize.py
 ```
 
 ---
 
 ## 主要实验结果
 
-### 知识图谱质量
+### 图谱质量
 
-| 指标 | 数值 |
-|------|------|
-| 实体总数 | 110 |
-| 三元组总数 | 318 |
-| 实体类型 | 8类 |
-| 关系类型 | 16类 |
-| 最大连通分量覆盖率 | 95.5% |
-| 台积电节点度中心性 | 0.239（最高） |
+| 指标 | 数值 | 作业要求 |
+|------|------|---------|
+| 实体数量 | 110 | ≥ 100 ✅ |
+| 三元组数量 | 318 | ≥ 300 ✅ |
+| 实体类型 | 8 类 | ≥ 3 ✅ |
+| 关系类型 | 16 类 | ≥ 3 ✅ |
+| 最大连通分量覆盖率 | 95.5% | — |
 
 ### 推理效果
 
 | 方法 | 结果 |
 |------|------|
-| 规则推理（7条规则）| 推导出 104 条新知识三元组 |
-| 路径推理（BFS 4跳）| 准确率 85.7% |
-| 幻觉检测 | 准确率 100%（8/8） |
+| 规则推理（7 条 Horn 规则）| 推导出 104 条新知识三元组 |
+| 路径推理（BFS，最多 4 跳）| 准确率 85.7%（6/7 测试用例）|
 
-### GraphRAG 问答对比示例
+### GraphRAG 问答对比（示例）
 
-**问题**：苹果A17 Pro和骁龙8 Gen 3谁的制造工艺更先进？
+**问题**：苹果 A17 Pro 和骁龙 8 Gen 3，谁的制造工艺更先进？
 
-| | 无KG直接回答 | KG增强回答 |
-|--|------------|-----------|
-| 工艺数据 | "都在4nm左右" | A17 Pro: TSMC N3；骁龙8 Gen 3: TSMC N4P |
-| 证据来源 | 无 | 3条知识图谱三元组 |
-| 置信度 | 低（模糊表述）| 高（有据可查）|
+| | 无 KG 直接回答 | KG 增强回答 |
+|--|--------------|------------|
+| 工艺描述 | "都在 4nm 左右" | A17 Pro: TSMC N3；骁龙 8 Gen 3: TSMC N4P |
+| 证据来源 | 无 | 3 条知识图谱三元组 |
+| 推理链 | 无 | `A17Pro→TSMC 3nm` / `骁龙→TSMC 4nm` / `3nm successor_of 4nm` |
+| 置信度 | 低（模糊） | 高（有据可查）|
 
----
-
-## 大模型使用说明
-
-本项目在以下场景使用了大模型（符合学术规范要求说明）：
-- **代码辅助生成**：部分模块代码由 AI 辅助编写，经人工审核和调试
-- **数据整理**：实体与三元组数据参考公开技术资料人工整理
-- **报告撰写**：报告内容由作者独立撰写，AI仅用于润色
+**幻觉检测准确率：100%（8/8 声明正确核查）**
 
 ---
 
-## 小组成员分工
+## 依赖说明
 
-| 成员 | 贡献 |
-|------|------|
-| 成员A | 数据收集整理（entities.csv、triples.csv）、图谱Schema设计 |
-| 成员B | 图谱构建模块（build_kg.py）、可视化（visualize.py） |
-| 成员C | 推理模块（reasoning.py）、评估（evaluate.py） |
-| 成员D | 大模型增强（llm_qa.py、graph_retrieval.py）、案例分析 |
+| 库 | 版本要求 | 用途 |
+|----|---------|------|
+| networkx | ≥ 3.1 | 图谱存储与图算法 |
+| pyvis | ≥ 0.3.2 | 交互式 HTML 可视化 |
+| matplotlib | ≥ 3.7 | 静态图表 |
+| pandas | ≥ 2.0 | 数据处理 |
+| openai | ≥ 1.0 | DeepSeek API 调用（可选）|
+| python-pptx | ≥ 0.6 | PPT 生成脚本 |
 
 ---
 
-## 参考资料
+## 学术规范声明
 
-- NetworkX 文档：https://networkx.org/
-- pyvis 可视化：https://pyvis.readthedocs.io/
-- DeepSeek API：https://platform.deepseek.com/
-- GraphRAG 论文：Edge et al., 2024, *From Local to Global: A Graph RAG Approach*
-- TransE 论文：Bordes et al., 2013, *Translating Embeddings for Modeling Multi-relational Data*
+本项目在以下环节使用了 AI 辅助（Cursor AI，底层为 Claude Sonnet）：
+
+- **代码辅助生成**：各模块初始框架由 AI 辅助生成，经小组成员逐行阅读、调试验证，修正了 BFS 双向遍历、Windows 编码兼容等问题。
+- **文档辅助撰写**：报告和 README 初稿由 AI 辅助生成，小组成员核对所有数据与结论后修改定稿。
+- **未使用 AI 的部分**：`entities.csv` 与 `triples.csv` 由小组成员参考公开技术资料人工整理；推理规则语义设计、测试问题选取、案例分析判断均由小组成员独立完成。
+
+数据来源：Intel ARK、AMD 官网、TSMC 官网、AnandTech、IEEE Spectrum、TechPowerUp 等公开资料。
+
+---
+
+## 参考文献
+
+- Bordes et al., *Translating Embeddings for Modeling Multi-relational Data*, NeurIPS 2013
+- Edge et al., *From Local to Global: A Graph RAG Approach*, arXiv:2404.16130, 2024
+- Ji et al., *A Survey on Knowledge Graphs*, IEEE TNNLS 2022
+- Pan et al., *Unifying Large Language Models and Knowledge Graphs: A Roadmap*, IEEE TKDE 2024
+- [NetworkX Docs](https://networkx.org/) · [pyvis Docs](https://pyvis.readthedocs.io/) · [DeepSeek API](https://platform.deepseek.com/api-docs/)
+
+---
+
+## 小组成员
+
+| 成员 | 主要分工 |
+|------|---------|
+| 成员 A | 数据收集整理、Schema 设计、entities.csv / triples.csv |
+| 成员 B | build_kg.py、reasoning.py、visualize.py、图谱质量分析 |
+| 成员 C | graph_retrieval.py、llm_qa.py、evaluate.py、报告与 PPT |
