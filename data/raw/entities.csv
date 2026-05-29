@@ -1,0 +1,111 @@
+id,name,name_cn,type,description,founded_year,country
+C001,Intel,英特尔,Company,全球最大CPU制造商之一，x86处理器的发明者，1968年创立于美国加州,1968,USA
+C002,AMD,超威半导体,Company,美国半导体公司，生产CPU与GPU，Ryzen和Radeon系列知名,1969,USA
+C003,NVIDIA,英伟达,Company,全球领先的GPU制造商，深度学习加速卡CUDA生态系统的缔造者,1993,USA
+C004,TSMC,台积电,Company,全球最大的专业晶圆代工厂，掌握最先进制程工艺,1987,Taiwan
+C005,Samsung Semiconductor,三星半导体,Company,韩国三星集团旗下半导体部门，同时从事设计与代工,1969,South Korea
+C006,Qualcomm,高通,Company,全球最大移动处理器设计公司，Snapdragon骁龙系列知名,1985,USA
+C007,Apple Silicon,苹果芯片,Company,苹果公司自研芯片部门，设计M系列和A系列芯片,1977,USA
+C008,ARM Holdings,ARM,Company,全球最广泛使用的处理器架构授权公司，RISC架构领导者,1990,UK
+C009,MediaTek,联发科,Company,台湾半导体公司，移动芯片领域重要厂商，天玑系列知名,1997,Taiwan
+C010,HiSilicon,华为海思,Company,华为旗下半导体设计子公司，设计麒麟系列移动芯片,2004,China
+C011,SK Hynix,SK海力士,Company,韩国半导体内存制造商，DRAM和NAND Flash主要供应商,1983,South Korea
+C012,Micron Technology,美光科技,Company,美国内存与存储芯片制造商，DRAM和NAND Flash主要供应商,1978,USA
+C013,Broadcom,博通,Company,美国无线通讯、宽带与企业应用芯片领导厂商,1961,USA
+C014,Texas Instruments,德州仪器,Company,美国半导体公司，嵌入式处理器和模拟芯片领域领导者,1951,USA
+C015,ASML,阿斯麦,Company,荷兰光刻机制造商，全球唯一EUV光刻机供应商,1984,Netherlands
+CH001,Intel Core i9-14900K,酷睿i9-14900K,Chip,Intel第14代桌面旗舰处理器，24核心(8P+16E)，最高睿频5.6GHz,2023,USA
+CH002,Intel Core i7-13700K,酷睿i7-13700K,Chip,Intel第13代桌面高性能处理器，16核心(8P+8E)，最高睿频5.4GHz,2022,USA
+CH003,Intel Xeon W9-3595X,至强W9-3595X,Chip,Intel工作站旗舰处理器，60核心，面向专业工作站市场,2023,USA
+CH004,Intel Meteor Lake,Meteor Lake,Chip,Intel第14代移动处理器，首款采用Intel 4工艺的产品，集成GPU和NPU,2023,USA
+CH005,Intel Arc A770,Arc A770,Chip,Intel独立显卡，采用Xe-HPG架构，面向主流游戏市场,2022,USA
+CH006,AMD Ryzen 9 7950X,锐龙9 7950X,Chip,AMD Zen4架构桌面旗舰处理器，16核心32线程，最高睿频5.7GHz,2022,USA
+CH007,AMD Ryzen 5 7600X,锐龙5 7600X,Chip,AMD Zen4架构桌面主流处理器，6核心12线程，高性价比,2022,USA
+CH008,AMD EPYC 9654,霄龙9654,Chip,AMD服务器旗舰处理器，96核心192线程，面向数据中心市场,2022,USA
+CH009,AMD Ryzen 9 5950X,锐龙9 5950X,Chip,AMD Zen3架构桌面旗舰处理器，16核心32线程,2020,USA
+CH010,AMD Radeon RX 7900 XTX,镭龙RX 7900 XTX,Chip,AMD RDNA3架构旗舰显卡，面向高端游戏市场,2022,USA
+CH011,NVIDIA H100,H100,Chip,NVIDIA Hopper架构数据中心AI加速卡，AI训练旗舰产品，80GB HBM3,2022,USA
+CH012,NVIDIA RTX 4090,GeForce RTX 4090,Chip,NVIDIA Ada Lovelace架构消费级旗舰显卡，16384个CUDA核心,2022,USA
+CH013,NVIDIA A100,A100,Chip,NVIDIA Ampere架构数据中心GPU，前一代AI训练主力产品,2020,USA
+CH014,NVIDIA RTX 3090,GeForce RTX 3090,Chip,NVIDIA Ampere架构消费级旗舰显卡，24GB GDDR6X,2020,USA
+CH015,Apple M3 Ultra,M3 Ultra,Chip,苹果M3 Ultra芯片，双die封装，76核GPU，面向Mac Pro,2024,USA
+CH016,Apple M2,M2,Chip,苹果第二代M系列芯片，8核CPU+10核GPU，面向MacBook Air/Pro,2022,USA
+CH017,Apple A17 Pro,A17 Pro,Chip,苹果iPhone 15 Pro系列搭载芯片，6核CPU，6核GPU，集成NPU,2023,USA
+CH018,Apple A16 Bionic,A16 Bionic,Chip,苹果iPhone 14 Pro系列搭载芯片，4nm制程，6核CPU,2022,USA
+CH019,Qualcomm Snapdragon 8 Gen 3,骁龙8 Gen 3,Chip,高通旗舰移动SoC，八核CPU，Adreno 750 GPU，集成AI引擎,2023,USA
+CH020,Qualcomm Snapdragon 8 Gen 2,骁龙8 Gen 2,Chip,高通旗舰移动SoC，采用4nm工艺，集成X70调制解调器,2022,USA
+CH021,Qualcomm Snapdragon 888,骁龙888,Chip,高通第一款5nm旗舰移动SoC，首款集成5G基带的旗舰芯片,2020,USA
+CH022,MediaTek Dimensity 9300,天玑9300,Chip,联发科旗舰移动SoC，全大核设计，4nm台积电制程,2023,Taiwan
+CH023,MediaTek Dimensity 9200,天玑9200,Chip,联发科旗舰移动SoC，ARM Cortex-X3架构，4nm台积电制程,2022,Taiwan
+CH024,HiSilicon Kirin 9000S,麒麟9000S,Chip,华为海思旗舰SoC，采用SMIC 7nm工艺，搭载Mate 60 Pro,2023,China
+CH025,HiSilicon Kirin 9000,麒麟9000,Chip,华为海思旗舰SoC，台积电5nm工艺，集成5G基带,2020,China
+CH026,Samsung Exynos 2400,Exynos 2400,Chip,三星旗舰移动SoC，10核CPU，采用三星4nm工艺,2023,South Korea
+CH027,Samsung Exynos 2200,Exynos 2200,Chip,三星旗舰移动SoC，集成AMD RDNA2 GPU，4nm制程,2022,South Korea
+CH028,Intel Core i9-12900K,酷睿i9-12900K,Chip,Intel第12代桌面旗舰处理器，首款混合架构处理器，16核心,2021,USA
+P001,TSMC 3nm (N3),台积电3nm,ProcessNode,台积电第一代3nm工艺节点，采用FinFET架构，密度大幅提升,2022,Taiwan
+P002,TSMC 4nm (N4),台积电4nm,ProcessNode,台积电4nm工艺节点，5nm工艺的改进版，提升性能与功耗效率,2021,Taiwan
+P003,TSMC 5nm (N5),台积电5nm,ProcessNode,台积电第一代5nm工艺节点，采用EUV光刻，晶体管密度大幅提升,2020,Taiwan
+P004,TSMC 7nm (N7),台积电7nm,ProcessNode,台积电7nm工艺节点，首款量产的7nm工艺，支持EUV部分层次,2018,Taiwan
+P005,Intel 7,Intel 7nm,ProcessNode,Intel增强型10nm SuperFin工艺，重命名为Intel 7，用于第12/13代酷睿,2021,USA
+P006,Intel 4,Intel 4nm,ProcessNode,Intel第一款采用EUV光刻的工艺节点，晶体管密度比Intel 7提升20%,2023,USA
+P007,Samsung 4nm,三星4nm,ProcessNode,三星4nm GAA工艺节点，用于Exynos和Snapdragon系列,2021,South Korea
+P008,Samsung 3nm GAA,三星3nm GAA,ProcessNode,三星全球首款量产3nm GAA工艺，使用多桥沟道场效应晶体管,2022,South Korea
+P009,SMIC N+1,中芯N+1,ProcessNode,中芯国际第一代先进工艺，等效约7nm，用于麒麟9000S,2023,China
+P010,TSMC 28nm,台积电28nm,ProcessNode,台积电成熟制程工艺节点，广泛用于IoT、汽车、工业芯片,2011,Taiwan
+A001,x86-64,x86-64,Architecture,Intel和AMD共同使用的64位指令集架构，桌面服务器市场主流架构,1999,USA
+A002,ARM Cortex-X4,Cortex-X4,Architecture,ARM高性能大核架构，用于Snapdragon 8 Gen 3等旗舰移动芯片,2023,UK
+A003,ARM Cortex-A510,Cortex-A510,Architecture,ARM高效小核架构，与大核组合使用实现异构计算节能,2021,UK
+A004,Zen4,Zen 4,Architecture,AMD第四代Zen CPU微架构，用于Ryzen 7000和EPYC 9004系列,2022,USA
+A005,Raptor Cove,Raptor Cove,Architecture,Intel第13/14代酷睿P核微架构，性能相比Golden Cove提升15%,2022,USA
+A006,Golden Cove,Golden Cove,Architecture,Intel第12代酷睿P核微架构，Alder Lake首发，支持DDR5,2021,USA
+A007,ARM Neoverse N2,Neoverse N2,Architecture,ARM服务器级CPU架构，用于数据中心和云计算场景,2021,UK
+A008,Apple Avalanche,Avalanche,Architecture,苹果M2/M3系列高性能大核架构，ARM指令集自研实现,2022,USA
+M001,Silicon,硅,Material,最广泛使用的半导体材料，纯度要求极高，是现代集成电路的基础,,,
+M002,Silicon Carbide,碳化硅,Material,宽禁带半导体材料，耐高温高压，广泛用于电动汽车功率器件,,,
+M003,Gallium Nitride,氮化镓,Material,宽禁带半导体，用于高频高功率器件和5G基站功率放大器,,,
+M004,Gallium Arsenide,砷化镓,Material,高电子迁移率半导体，用于高频RF器件和光电子器件,,,
+M005,Germanium,锗,Material,早期半导体材料，现用于SiGe异质结和高速器件,,,
+M006,Silicon Germanium,硅锗合金,Material,硅与锗的合金，用于异质结双极晶体管和高速射频电路,,,
+M007,Hafnium Oxide,氧化铪,Material,高k介电材料，替代传统SiO2作为栅极介电层，用于先进节点,,,
+M008,Silicon Dioxide,二氧化硅,Material,传统栅极介电材料，也用于隔离和钝化层,,,
+M009,Copper,铜,Material,自90年代起取代铝作为集成电路互连材料，电阻率更低,,,
+M010,Cobalt,钴,Material,先进节点中用于局部互连层的材料，替代钨的部分应用,,,
+M011,EUV Photoresist,EUV光刻胶,Material,专用于EUV光刻工艺的感光材料，需要极高的分辨率和灵敏度,,,
+M012,High-k Dielectric,高k介电质,Material,介电常数高于SiO2的栅极介电材料，减少漏电流，提高性能,,,
+D001,FinFET,鳍形场效应晶体管,Device,三维立体栅极结构，从16/14nm节点开始取代平面MOSFET,2011,USA
+D002,GAA FET,全环绕栅极场效应晶体管,Device,栅极完全包围沟道的晶体管结构，比FinFET更好的静电控制，用于3nm以下,2022,South Korea
+D003,MOSFET,金属氧化物场效应晶体管,Device,最基础的场效应晶体管类型，集成电路的基本构建单元,1960,USA
+D004,CMOS,互补金属氧化物半导体,Device,由NMOS和PMOS互补组成的电路结构，是现代数字集成电路主流工艺,1963,USA
+D005,DRAM,动态随机存取存储器,Device,主存储器主要类型，需要定期刷新，速度快密度高,1968,USA
+D006,SRAM,静态随机存取存储器,Device,不需要刷新的随机存取存储器，速度更快，功耗更高，用于CPU缓存,1963,USA
+D007,NAND Flash,NAND闪存,Device,非易失性存储器，用于固态硬盘和移动存储，写前需先擦除,1989,Japan
+D008,HBM,高带宽存储器,Device,三维堆叠的高速内存，通过硅通孔连接，用于AI加速卡和高性能GPU,2013,USA
+D009,DDR5,第五代双倍数据率内存,Device,最新一代DDR内存标准，带宽和容量相比DDR4大幅提升,2020,USA
+D010,LPDDR5,低功耗DDR5内存,Device,移动设备专用高性能内存，在DDR5基础上优化功耗,2020,South Korea
+D011,NPU,神经网络处理单元,Device,专用于神经网络推理的硬件单元，集成于现代SoC中加速AI任务,2017,China
+D012,PCIe 5.0,PCIe 5.0接口,Device,高速串行扩展总线第五代标准，带宽较PCIe 4.0翻倍至32GT/s,2019,USA
+AP001,移动终端处理,Mobile Computing,Application,智能手机和平板电脑中的计算任务，需要高能效比,,,
+AP002,服务器计算,Server Computing,Application,数据中心和企业级服务器的计算工作负载，需要高吞吐量和可靠性,,,
+AP003,AI训练,AI Training,Application,大规模神经网络训练任务，需要极高算力和内存带宽,,,
+AP004,AI推理,AI Inference,Application,部署后的神经网络推理任务，需要低延迟和高吞吐,,,
+AP005,图形渲染,Graphics Rendering,Application,3D图形和实时游戏画面渲染，需要大量并行浮点计算,,,
+AP006,高性能计算,HPC,Application,科学仿真、气候模拟等高性能计算任务，需要高精度浮点运算,,,
+AP007,物联网终端,IoT,Application,低功耗的物联网设备应用，需要极低的功耗和成本,,,
+AP008,汽车电子,Automotive Electronics,Application,智能驾驶、车载信息娱乐等汽车电子应用，需要高可靠性和宽温度范围,,,
+AP009,5G基站通信,5G Base Station,Application,5G无线基站的信号处理，需要高频高功率的射频器件,,,
+AP010,数据中心,Data Center,Application,大规模数据处理、存储和云服务的基础设施,,,
+AP011,边缘计算,Edge Computing,Application,靠近数据源的本地计算，需要平衡算力和功耗,,,
+AP012,游戏主机,Gaming Console,Application,游戏主机的计算和图形处理，需要高图形性能和低延迟,,,
+AP013,个人电脑,Personal Computer,Application,桌面PC和笔记本电脑的日常计算任务,,,
+AP014,无线通信,Wireless Communication,Application,蜂窝网络、WiFi等无线通信信号处理,,,
+AP015,嵌入式控制,Embedded Control,Application,工业控制、家电等嵌入式系统应用，需要实时响应能力,,,
+T001,EUV光刻,EUV Lithography,Technology,极紫外光刻技术，波长13.5nm，是7nm以下节点量产的关键技术,,,
+T002,DUV光刻,DUV Lithography,Technology,深紫外光刻技术，波长193nm，通过多重图案化技术延伸至先进节点,,,
+T003,原子层沉积,ALD,Technology,逐原子层沉积薄膜的技术，用于沉积高k栅介质和金属栅等超薄膜,,,
+T004,化学气相沉积,CVD,Technology,通过化学反应在衬底上沉积薄膜的工艺，广泛用于各种薄膜的沉积,,,
+T005,化学机械平坦化,CMP,Technology,将晶圆表面平坦化的工艺，对于多层互连结构至关重要,,,
+T006,离子注入,Ion Implantation,Technology,向半导体材料中掺入特定杂质的工艺，精确控制掺杂浓度和深度,,,
+T007,多重图案化,Multi-Patterning,Technology,通过多次曝光实现比单次光刻更小特征尺寸的技术,,,
+T008,先进封装,Advanced Packaging,Technology,2.5D和3D集成技术，包括CoWoS、SoIC等，提升芯片集成密度,,,
+T009,3D堆叠,3D Stacking,Technology,将多个芯片或存储器垂直堆叠的技术，提升存储密度和带宽,,,
+T010,硅通孔技术,Through-Silicon Via (TSV),Technology,在硅芯片中制作垂直互连通道，实现芯片间高密度连接的技术,,,

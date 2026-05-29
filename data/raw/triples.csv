@@ -1,0 +1,319 @@
+subject_id,predicate,object_id,confidence,description
+C001,designs,CH001,1.0,Intel设计了Core i9-14900K处理器
+C001,designs,CH002,1.0,Intel设计了Core i7-13700K处理器
+C001,designs,CH003,1.0,Intel设计了Xeon W9-3595X处理器
+C001,designs,CH004,1.0,Intel设计了Meteor Lake处理器
+C001,designs,CH005,1.0,Intel设计了Arc A770显卡
+C001,designs,CH028,1.0,Intel设计了Core i9-12900K处理器
+C002,designs,CH006,1.0,AMD设计了Ryzen 9 7950X处理器
+C002,designs,CH007,1.0,AMD设计了Ryzen 5 7600X处理器
+C002,designs,CH008,1.0,AMD设计了EPYC 9654服务器处理器
+C002,designs,CH009,1.0,AMD设计了Ryzen 9 5950X处理器
+C002,designs,CH010,1.0,AMD设计了Radeon RX 7900 XTX显卡
+C003,designs,CH011,1.0,NVIDIA设计了H100 AI加速卡
+C003,designs,CH012,1.0,NVIDIA设计了RTX 4090显卡
+C003,designs,CH013,1.0,NVIDIA设计了A100 AI加速卡
+C003,designs,CH014,1.0,NVIDIA设计了RTX 3090显卡
+C007,designs,CH015,1.0,Apple设计了M3 Ultra芯片
+C007,designs,CH016,1.0,Apple设计了M2芯片
+C007,designs,CH017,1.0,Apple设计了A17 Pro芯片
+C007,designs,CH018,1.0,Apple设计了A16 Bionic芯片
+C006,designs,CH019,1.0,Qualcomm设计了Snapdragon 8 Gen 3
+C006,designs,CH020,1.0,Qualcomm设计了Snapdragon 8 Gen 2
+C006,designs,CH021,1.0,Qualcomm设计了Snapdragon 888
+C009,designs,CH022,1.0,MediaTek设计了Dimensity 9300
+C009,designs,CH023,1.0,MediaTek设计了Dimensity 9200
+C010,designs,CH024,1.0,HiSilicon设计了Kirin 9000S
+C010,designs,CH025,1.0,HiSilicon设计了Kirin 9000
+C005,designs,CH026,1.0,Samsung设计了Exynos 2400
+C005,designs,CH027,1.0,Samsung设计了Exynos 2200
+C004,fabricates,CH006,1.0,TSMC代工生产Ryzen 9 7950X
+C004,fabricates,CH007,1.0,TSMC代工生产Ryzen 5 7600X
+C004,fabricates,CH008,1.0,TSMC代工生产EPYC 9654
+C004,fabricates,CH009,1.0,TSMC代工生产Ryzen 9 5950X
+C004,fabricates,CH010,1.0,TSMC代工生产Radeon RX 7900 XTX
+C004,fabricates,CH011,1.0,TSMC代工生产H100
+C004,fabricates,CH012,1.0,TSMC代工生产RTX 4090
+C004,fabricates,CH013,1.0,TSMC代工生产A100
+C004,fabricates,CH014,1.0,TSMC代工生产RTX 3090
+C004,fabricates,CH015,1.0,TSMC代工生产M3 Ultra
+C004,fabricates,CH016,1.0,TSMC代工生产M2
+C004,fabricates,CH017,1.0,TSMC代工生产A17 Pro
+C004,fabricates,CH018,1.0,TSMC代工生产A16 Bionic
+C004,fabricates,CH019,1.0,TSMC代工生产Snapdragon 8 Gen 3
+C004,fabricates,CH020,1.0,TSMC代工生产Snapdragon 8 Gen 2
+C004,fabricates,CH021,1.0,TSMC代工生产Snapdragon 888
+C004,fabricates,CH022,1.0,TSMC代工生产Dimensity 9300
+C004,fabricates,CH023,1.0,TSMC代工生产Dimensity 9200
+C004,fabricates,CH025,1.0,TSMC代工生产Kirin 9000
+C005,fabricates,CH026,1.0,Samsung代工生产Exynos 2400
+C005,fabricates,CH027,1.0,Samsung代工生产Exynos 2200
+C005,fabricates,CH024,1.0,Samsung代工生产Kirin 9000S（SMIC工艺曾报道有争议，此处标注Samsung）
+C009,fabricates,CH024,0.5,中芯国际(SMIC)代工生产Kirin 9000S（部分来源）
+C001,fabricates,CH001,1.0,Intel自产Core i9-14900K
+C001,fabricates,CH002,1.0,Intel自产Core i7-13700K
+C001,fabricates,CH003,1.0,Intel自产Xeon W9-3595X
+C001,fabricates,CH004,1.0,Intel自产Meteor Lake
+C001,fabricates,CH005,1.0,Intel自产Arc A770
+C001,fabricates,CH028,1.0,Intel自产Core i9-12900K
+CH001,uses_process,P005,1.0,Core i9-14900K采用Intel 7工艺
+CH002,uses_process,P005,1.0,Core i7-13700K采用Intel 7工艺
+CH003,uses_process,P005,1.0,Xeon W9-3595X采用Intel 7工艺
+CH004,uses_process,P006,1.0,Meteor Lake采用Intel 4工艺
+CH005,uses_process,P005,1.0,Arc A770采用Intel 7(6nm改版)工艺
+CH006,uses_process,P002,1.0,Ryzen 9 7950X采用TSMC 4nm工艺
+CH007,uses_process,P002,1.0,Ryzen 5 7600X采用TSMC 4nm工艺
+CH008,uses_process,P002,1.0,EPYC 9654采用TSMC 4nm工艺
+CH009,uses_process,P004,1.0,Ryzen 9 5950X采用TSMC 7nm工艺
+CH010,uses_process,P001,1.0,Radeon RX 7900 XTX采用TSMC 5nm工艺
+CH011,uses_process,P002,1.0,H100采用TSMC 4nm工艺
+CH012,uses_process,P002,1.0,RTX 4090采用TSMC 4nm工艺
+CH013,uses_process,P003,1.0,A100采用TSMC 7nm工艺
+CH014,uses_process,P004,1.0,RTX 3090采用Samsung 8nm工艺（简化标注）
+CH015,uses_process,P001,1.0,M3 Ultra采用TSMC 3nm工艺
+CH016,uses_process,P003,1.0,M2采用TSMC 5nm工艺
+CH017,uses_process,P001,1.0,A17 Pro采用TSMC 3nm工艺
+CH018,uses_process,P002,1.0,A16 Bionic采用TSMC 4nm工艺
+CH019,uses_process,P001,1.0,Snapdragon 8 Gen 3采用TSMC 4nm(N4P)工艺
+CH020,uses_process,P002,1.0,Snapdragon 8 Gen 2采用TSMC 4nm工艺
+CH021,uses_process,P003,1.0,Snapdragon 888采用TSMC 5nm工艺
+CH022,uses_process,P001,1.0,Dimensity 9300采用TSMC 4nm工艺
+CH023,uses_process,P002,1.0,Dimensity 9200采用TSMC 4nm工艺
+CH024,uses_process,P009,1.0,Kirin 9000S采用SMIC N+1(7nm级)工艺
+CH025,uses_process,P003,1.0,Kirin 9000采用TSMC 5nm工艺
+CH026,uses_process,P007,1.0,Exynos 2400采用Samsung 4nm工艺
+CH027,uses_process,P007,1.0,Exynos 2200采用Samsung 4nm工艺
+CH028,uses_process,P005,1.0,Core i9-12900K采用Intel 7工艺
+CH001,based_on_arch,A005,1.0,Core i9-14900K基于Raptor Cove架构
+CH002,based_on_arch,A005,1.0,Core i7-13700K基于Raptor Cove架构
+CH003,based_on_arch,A005,1.0,Xeon W9-3595X基于Raptor Cove架构
+CH004,based_on_arch,A005,0.8,Meteor Lake基于改进型Redwood Cove架构
+CH006,based_on_arch,A004,1.0,Ryzen 9 7950X基于Zen4架构
+CH007,based_on_arch,A004,1.0,Ryzen 5 7600X基于Zen4架构
+CH008,based_on_arch,A004,1.0,EPYC 9654基于Zen4架构
+CH009,based_on_arch,A004,0.8,Ryzen 9 5950X基于Zen3架构（前代）
+CH028,based_on_arch,A006,1.0,Core i9-12900K基于Golden Cove架构
+CH015,based_on_arch,A008,1.0,M3 Ultra基于Apple Avalanche大核架构
+CH016,based_on_arch,A008,1.0,M2基于Apple Avalanche大核架构
+CH017,based_on_arch,A002,0.8,A17 Pro基于ARM Cortex-X4改进架构
+CH019,based_on_arch,A002,1.0,Snapdragon 8 Gen 3基于Cortex-X4架构
+CH020,based_on_arch,A002,0.9,Snapdragon 8 Gen 2基于Cortex-X3架构
+CH008,based_on_arch,A007,0.8,EPYC 9654兼容ARM Neoverse竞争场景分析
+CH008,based_on_arch,A004,1.0,EPYC 9654基于Zen4架构（修正）
+CH001,used_for,AP013,1.0,Core i9-14900K用于高端个人电脑
+CH001,used_for,AP005,0.8,Core i9-14900K可用于创意工作图形渲染
+CH002,used_for,AP013,1.0,Core i7-13700K用于个人电脑
+CH003,used_for,AP002,1.0,Xeon W9-3595X用于专业工作站服务器计算
+CH004,used_for,AP013,1.0,Meteor Lake用于轻薄笔记本个人电脑
+CH005,used_for,AP012,1.0,Arc A770用于游戏主机/PC
+CH005,used_for,AP005,1.0,Arc A770用于图形渲染
+CH006,used_for,AP013,1.0,Ryzen 9 7950X用于个人电脑
+CH006,used_for,AP006,0.9,Ryzen 9 7950X可用于高性能计算工作站
+CH007,used_for,AP013,1.0,Ryzen 5 7600X用于个人电脑
+CH008,used_for,AP002,1.0,EPYC 9654用于服务器计算
+CH008,used_for,AP010,1.0,EPYC 9654用于数据中心
+CH008,used_for,AP003,0.8,EPYC 9654支持AI训练任务
+CH011,used_for,AP003,1.0,H100用于AI训练
+CH011,used_for,AP010,1.0,H100用于数据中心
+CH011,used_for,AP006,1.0,H100用于高性能计算
+CH012,used_for,AP012,1.0,RTX 4090用于游戏主机
+CH012,used_for,AP005,1.0,RTX 4090用于图形渲染
+CH012,used_for,AP004,0.9,RTX 4090可用于AI推理
+CH013,used_for,AP003,1.0,A100用于AI训练
+CH013,used_for,AP006,1.0,A100用于高性能计算
+CH013,used_for,AP010,1.0,A100用于数据中心
+CH014,used_for,AP012,1.0,RTX 3090用于游戏主机
+CH014,used_for,AP005,1.0,RTX 3090用于图形渲染
+CH015,used_for,AP013,0.8,M3 Ultra用于专业Mac工作站（PC）
+CH015,used_for,AP005,1.0,M3 Ultra用于专业图形渲染
+CH015,used_for,AP006,0.9,M3 Ultra支持高性能计算
+CH016,used_for,AP013,1.0,M2用于MacBook（个人电脑）
+CH016,used_for,AP011,0.8,M2可用于边缘计算
+CH017,used_for,AP001,1.0,A17 Pro用于移动终端处理(iPhone)
+CH017,used_for,AP004,0.9,A17 Pro支持本地AI推理
+CH018,used_for,AP001,1.0,A16 Bionic用于移动终端处理
+CH019,used_for,AP001,1.0,Snapdragon 8 Gen 3用于移动终端处理
+CH019,used_for,AP014,1.0,Snapdragon 8 Gen 3支持无线通信
+CH019,used_for,AP004,0.9,Snapdragon 8 Gen 3支持AI推理
+CH020,used_for,AP001,1.0,Snapdragon 8 Gen 2用于移动终端处理
+CH020,used_for,AP014,1.0,Snapdragon 8 Gen 2支持无线通信
+CH021,used_for,AP001,1.0,Snapdragon 888用于移动终端处理
+CH021,used_for,AP009,0.9,Snapdragon 888支持5G基站相关应用
+CH022,used_for,AP001,1.0,Dimensity 9300用于移动终端处理
+CH023,used_for,AP001,1.0,Dimensity 9200用于移动终端处理
+CH024,used_for,AP001,1.0,Kirin 9000S用于移动终端处理
+CH024,used_for,AP011,0.8,Kirin 9000S支持边缘计算
+CH025,used_for,AP001,1.0,Kirin 9000用于移动终端处理
+CH026,used_for,AP001,1.0,Exynos 2400用于移动终端处理
+CH027,used_for,AP001,1.0,Exynos 2200用于移动终端处理
+P001,uses_device,D002,1.0,3nm工艺采用GAA FET晶体管（三星3nm）或FinFET改进（台积电N3）
+P001,uses_device,D001,0.8,台积电3nm仍基于FinFET演进架构
+P002,uses_device,D001,1.0,4nm工艺采用FinFET晶体管结构
+P003,uses_device,D001,1.0,5nm工艺采用FinFET晶体管结构
+P004,uses_device,D001,1.0,7nm工艺采用FinFET晶体管结构
+P005,uses_device,D001,1.0,Intel 7工艺采用FinFET结构
+P006,uses_device,D001,1.0,Intel 4工艺采用FinFET结构
+P007,uses_device,D001,1.0,Samsung 4nm采用FinFET结构
+P008,uses_device,D002,1.0,Samsung 3nm GAA采用GAA FET结构
+P009,uses_device,D001,0.8,SMIC N+1采用类FinFET结构
+P010,uses_device,D004,1.0,28nm工艺使用CMOS器件
+CH011,uses_device,D008,1.0,H100集成HBM3高带宽存储器
+CH013,uses_device,D008,1.0,A100集成HBM2e高带宽存储器
+CH015,uses_device,D008,1.0,M3 Ultra集成LPDDR5X统一内存（类HBM）
+CH017,uses_device,D011,1.0,A17 Pro集成第二代神经网络引擎NPU
+CH019,uses_device,D011,1.0,Snapdragon 8 Gen 3集成Hexagon NPU
+CH022,uses_device,D011,1.0,Dimensity 9300集成APU 790 NPU
+CH024,uses_device,D011,1.0,Kirin 9000S集成达芬奇NPU
+CH001,uses_device,D009,1.0,Core i9-14900K支持DDR5内存
+CH006,uses_device,D009,1.0,Ryzen 9 7950X支持DDR5内存
+CH004,uses_device,D009,1.0,Meteor Lake支持DDR5内存
+CH001,uses_device,D012,1.0,Core i9-14900K支持PCIe 5.0
+CH006,uses_device,D012,1.0,Ryzen 9 7950X支持PCIe 5.0
+P001,uses_material,M001,1.0,3nm工艺基于硅衬底
+P001,uses_material,M007,1.0,3nm工艺使用氧化铪作为高k栅介质
+P001,uses_material,M009,1.0,3nm工艺使用铜互连
+P002,uses_material,M001,1.0,4nm工艺基于硅衬底
+P002,uses_material,M007,1.0,4nm工艺使用氧化铪栅介质
+P003,uses_material,M001,1.0,5nm工艺基于硅衬底
+P004,uses_material,M001,1.0,7nm工艺基于硅衬底
+P005,uses_material,M001,1.0,Intel 7工艺基于硅衬底
+P005,uses_material,M006,0.8,Intel工艺在某些层使用SiGe沟道增强
+P009,uses_material,M001,1.0,SMIC N+1基于硅衬底
+D001,uses_material,M001,1.0,FinFET主要使用硅作为沟道材料
+D001,uses_material,M007,1.0,FinFET使用高k介质(氧化铪)作为栅介质
+D002,uses_material,M001,1.0,GAA FET使用硅纳米片作为沟道
+D002,uses_material,M012,1.0,GAA FET使用高k介电质
+D004,uses_material,M001,1.0,CMOS器件基于硅材料
+M002,used_for,AP008,1.0,碳化硅(SiC)广泛用于汽车电子功率器件
+M003,used_for,AP009,1.0,氮化镓(GaN)用于5G基站功率放大器
+M004,used_for,AP014,1.0,砷化镓(GaAs)用于无线通信射频器件
+M002,used_for,AP015,0.9,碳化硅用于工业嵌入式控制的功率转换
+T001,enables_process,P001,1.0,EUV光刻是3nm工艺量产的关键技术
+T001,enables_process,P002,1.0,EUV光刻用于4nm工艺关键层
+T001,enables_process,P003,1.0,EUV光刻用于5nm工艺
+T002,enables_process,P004,1.0,DUV光刻结合多重图案化用于7nm工艺
+T002,enables_process,P005,1.0,DUV光刻和EUV混合用于Intel 7工艺
+T007,enables_process,P004,1.0,多重图案化使DUV实现7nm节点
+T007,enables_process,P009,1.0,多重图案化帮助SMIC N+1实现7nm级密度
+T003,enables_process,P001,1.0,原子层沉积用于3nm高k栅介质沉积
+T003,enables_process,P002,1.0,原子层沉积用于4nm工艺
+T008,enables_process,P001,0.9,先进封装与3nm芯片协同提升集成密度
+T009,enables_process,P001,0.9,3D堆叠技术与先进制程配合使用
+T010,enables_process,P001,1.0,硅通孔技术用于HBM与GPU的2.5D封装
+C015,manufactures_tool,T001,1.0,ASML是全球唯一的EUV光刻机供应商
+C015,manufactures_tool,T002,1.0,ASML也生产DUV光刻机
+C004,masters_technology,T001,1.0,TSMC掌握EUV光刻量产技术
+C001,masters_technology,T001,0.9,Intel也具备EUV光刻能力（Intel 4开始）
+A004,developed_by,C002,1.0,Zen4架构由AMD开发
+A005,developed_by,C001,1.0,Raptor Cove架构由Intel开发
+A006,developed_by,C001,1.0,Golden Cove架构由Intel开发
+A002,developed_by,C008,1.0,Cortex-X4架构由ARM开发
+A003,developed_by,C008,1.0,Cortex-A510架构由ARM开发
+A007,developed_by,C008,1.0,Neoverse N2架构由ARM开发
+A008,developed_by,C007,1.0,Avalanche架构由Apple自研
+A001,developed_by,C001,0.8,x86-64由Intel最初开发（AMD扩展64位）
+CH011,competes_with,CH013,1.0,H100与A100为同代竞争关系（H100是A100的后继）
+CH012,competes_with,CH010,1.0,RTX 4090与Radeon RX 7900 XTX直接竞争
+CH014,competes_with,CH010,0.8,RTX 3090与上代Radeon竞争
+CH001,competes_with,CH006,1.0,Core i9-14900K与Ryzen 9 7950X直接竞争
+CH002,competes_with,CH007,1.0,Core i7-13700K与Ryzen 5 7600X竞争
+CH003,competes_with,CH008,1.0,Xeon W9-3595X与EPYC 9654服务器竞争
+CH019,competes_with,CH022,1.0,Snapdragon 8 Gen 3与Dimensity 9300竞争
+CH019,competes_with,CH026,1.0,Snapdragon 8 Gen 3与Exynos 2400竞争
+CH017,competes_with,CH019,0.8,A17 Pro与Snapdragon 8 Gen 3竞争
+CH024,competes_with,CH019,0.8,Kirin 9000S与Snapdragon 8 Gen 3竞争
+CH011,successor_of,CH013,1.0,H100是A100的继代产品
+CH012,successor_of,CH014,1.0,RTX 4090是RTX 3090的继代产品
+CH001,successor_of,CH028,1.0,Core i9-14900K是Core i9-12900K的继代
+CH006,successor_of,CH009,1.0,Ryzen 9 7950X是Ryzen 9 5950X的继代
+CH019,successor_of,CH020,1.0,Snapdragon 8 Gen 3是Snapdragon 8 Gen 2的继代
+CH020,successor_of,CH021,1.0,Snapdragon 8 Gen 2是Snapdragon 888的继代
+CH017,successor_of,CH018,1.0,A17 Pro是A16 Bionic的继代
+CH022,successor_of,CH023,1.0,Dimensity 9300是Dimensity 9200的继代
+CH024,successor_of,CH025,1.0,Kirin 9000S是麒麟9000的继代（有争议，工艺降级）
+CH026,successor_of,CH027,1.0,Exynos 2400是Exynos 2200的继代
+P001,successor_of,P002,1.0,3nm工艺是4nm工艺的后继节点
+P002,successor_of,P003,1.0,4nm工艺是5nm工艺的后继节点
+P003,successor_of,P004,1.0,5nm工艺是7nm工艺的后继节点
+P006,successor_of,P005,1.0,Intel 4工艺是Intel 7工艺的后继节点
+CH004,uses_device,D011,1.0,Meteor Lake集成Intel AI Boost NPU
+CH011,supports_memory,D008,1.0,H100支持HBM3内存
+CH012,supports_memory,D009,1.0,RTX 4090使用GDDR6X内存
+CH013,supports_memory,D008,1.0,A100支持HBM2e内存
+CH017,supports_memory,D010,1.0,A17 Pro使用LPDDR5内存
+CH019,supports_memory,D010,1.0,Snapdragon 8 Gen 3使用LPDDR5X内存
+CH022,supports_memory,D010,1.0,Dimensity 9300使用LPDDR5X内存
+C004,uses_technology,T001,1.0,TSMC使用EUV光刻技术生产先进芯片
+C004,uses_technology,T008,1.0,TSMC使用CoWoS先进封装技术
+C004,uses_technology,T003,1.0,TSMC使用原子层沉积工艺
+C001,uses_technology,T002,1.0,Intel使用DUV光刻技术（早期节点）
+C001,uses_technology,T001,0.9,Intel 4及更先进节点使用EUV
+C005,uses_technology,T008,0.9,Samsung使用先进封装技术
+T008,uses_technology,T010,1.0,先进封装技术依赖硅通孔技术
+T009,uses_technology,T010,1.0,3D堆叠依赖硅通孔技术
+AP003,requires_device,D008,1.0,AI训练任务需要高带宽存储器HBM
+AP006,requires_device,D008,0.9,高性能计算通常也需要高带宽存储
+AP001,requires_device,D010,1.0,移动终端需要低功耗LPDDR5内存
+AP010,requires_device,D008,0.9,数据中心AI工作负载需要HBM
+AP012,requires_device,D009,1.0,游戏主机需要高速DDR5内存
+CH003,used_for,AP006,1.0,Xeon W9-3595X用于高性能计算
+CH003,used_for,AP005,0.9,Xeon W9-3595X用于专业图形渲染工作站
+CH009,used_for,AP006,0.8,Ryzen 9 5950X可用于高性能计算工作站
+CH010,used_for,AP006,0.8,Radeon RX 7900 XTX用于专业渲染高性能计算
+CH011,used_for,AP004,0.9,H100也支持大规模AI推理部署
+CH012,used_for,AP006,0.8,RTX 4090支持高性能计算和科学计算
+CH014,used_for,AP004,0.8,RTX 3090早期用于AI推理
+CH015,used_for,AP003,0.7,M3 Ultra支持本地AI训练（规模有限）
+CH016,used_for,AP011,0.9,M2用于边缘计算场景
+CH018,used_for,AP004,0.8,A16 Bionic支持本地AI推理
+CH020,used_for,AP004,0.8,Snapdragon 8 Gen 2支持移动AI推理
+CH021,used_for,AP014,1.0,Snapdragon 888支持无线通信
+CH023,used_for,AP014,0.9,Dimensity 9200支持无线通信
+CH025,used_for,AP014,0.9,Kirin 9000支持5G无线通信
+CH027,used_for,AP014,0.9,Exynos 2200支持无线通信
+CH028,used_for,AP006,0.7,Core i9-12900K可用于高性能计算
+CH028,used_for,AP005,0.8,Core i9-12900K用于创意内容渲染
+CH004,used_for,AP011,0.9,Meteor Lake适用于边缘计算场景
+CH019,used_for,AP011,0.8,Snapdragon 8 Gen 3支持移动边缘计算
+CH024,used_for,AP009,0.7,Kirin 9000S支持5G基站相关应用
+CH026,used_for,AP004,0.8,Exynos 2400支持移动AI推理
+M001,used_for,AP015,0.9,硅材料广泛用于嵌入式控制芯片
+M001,used_for,AP007,0.9,硅基芯片用于物联网终端
+M002,used_for,AP009,0.8,碳化硅用于5G基站功率器件
+M003,used_for,AP008,0.8,氮化镓用于汽车电子功率转换
+M004,used_for,AP007,0.7,砷化镓用于物联网射频芯片
+D003,used_for,AP007,1.0,MOSFET广泛用于物联网终端低功耗设计
+D004,used_for,AP015,1.0,CMOS工艺用于嵌入式控制芯片
+D007,used_for,AP010,1.0,NAND Flash用于数据中心存储系统
+D007,used_for,AP013,1.0,NAND Flash用于个人电脑SSD存储
+D005,used_for,AP002,1.0,DRAM用于服务器内存子系统
+D005,used_for,AP010,1.0,DRAM用于数据中心服务器
+D006,used_for,AP001,0.9,SRAM用于移动芯片CPU缓存
+T004,enables_process,P004,0.9,化学气相沉积用于7nm工艺薄膜沉积
+T004,enables_process,P005,0.9,CVD用于Intel 7工艺
+T005,enables_process,P001,1.0,化学机械平坦化用于3nm多层互连平坦化
+T005,enables_process,P002,1.0,CMP用于4nm工艺
+T006,enables_process,P003,1.0,离子注入用于5nm工艺掺杂
+T006,enables_process,P010,1.0,离子注入用于28nm成熟工艺
+T009,enables_process,P001,1.0,3D堆叠技术与3nm工艺配合HBM集成
+C004,uses_technology,T003,1.0,TSMC使用原子层沉积制备高k介质
+C004,uses_technology,T005,1.0,TSMC使用CMP实现多层互连平坦化
+C004,uses_technology,T009,0.9,TSMC使用3D堆叠技术(CoWoS)封装AI芯片
+C005,uses_technology,T001,0.9,Samsung也掌握EUV光刻技术用于3nm GAA
+C001,uses_technology,T006,1.0,Intel使用离子注入工艺进行掺杂
+C001,uses_technology,T003,1.0,Intel使用原子层沉积制备栅介质
+A001,developed_by,C002,0.8,x86-64中AMD64扩展由AMD开发并获Intel授权
+P010,uses_material,M008,1.0,28nm工艺仍使用二氧化硅作为部分介质
+P010,uses_material,M009,0.9,28nm工艺使用铜互连
+P005,uses_material,M009,1.0,Intel 7工艺使用铜互连
+P006,uses_material,M009,1.0,Intel 4工艺使用铜互连
+P006,uses_material,M010,0.8,Intel 4工艺在局部互连层使用钴
+P001,uses_material,M011,1.0,3nm工艺需要专用EUV光刻胶
+P002,uses_material,M011,1.0,4nm工艺使用EUV光刻胶
+D008,uses_material,M001,1.0,HBM基于硅基DRAM堆叠制造
+D011,uses_material,M001,1.0,NPU芯片基于硅基CMOS工艺制造
+CH003,uses_device,D009,1.0,Xeon W9-3595X支持DDR5内存
+CH008,uses_device,D009,1.0,EPYC 9654支持DDR5内存
+CH008,uses_device,D012,1.0,EPYC 9654支持PCIe 5.0
+CH003,uses_device,D012,1.0,Xeon W9-3595X支持PCIe 5.0
+CH016,uses_device,D010,1.0,Apple M2使用LPDDR5统一内存

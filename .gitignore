@@ -1,0 +1,66 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ===== 虚拟环境 =====
+venv/
+env/
+.env/
+.venv/
+
+# ===== 运行生成的输出文件 =====
+# 图谱数据（运行 build_kg.py 后自动生成）
+data/processed/
+data/triples.csv
+
+# 可视化文件（运行 visualize.py 后生成）
+results/kg_full.html
+results/kg_nvidia_subgraph.html
+results/kg_tsmc_subgraph.html
+results/kg_static.png
+results/kg_statistics.png
+
+# 推理与问答结果（运行后生成）
+results/reasoning_results.json
+results/qa_results.json
+results/metrics.json
+
+# ===== 保留这些文件（手动撰写的内容）=====
+# results/cases.md        ← 保留（手写案例分析）
+# results/metrics.json    ← 如果想提交预设指标也可以取消注释上面那行
+
+# ===== API 密钥 / 环境变量（绝对不要上传）=====
+.env
+*.key
+secrets.json
+config_local.py
+
+# ===== IDE 配置 =====
+.vscode/
+.idea/
+*.code-workspace
+.cursor/
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== pyvis 自动生成的依赖库文件夹 =====
+lib/
+
+# ===== 日志 =====
+*.log
+logs/
