@@ -28,7 +28,7 @@
 
 ```bash
 git clone https://github.com/你的用户名/你的仓库名.git
-cd KnowledgeGraph
+cd KnowledgeGraph_for_IC
 ```
 
 ### 第二步：安装依赖
