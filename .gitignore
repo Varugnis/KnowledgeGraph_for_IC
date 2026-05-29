@@ -61,6 +61,9 @@ desktop.ini
 # ===== pyvis 自动生成的依赖库文件夹 =====
 lib/
 
+# ===== 嵌套git仓库（忽略，不作为子模块）=====
+KnowledgeGraph_for_IC/
+
 # ===== 日志 =====
 *.log
 logs/
