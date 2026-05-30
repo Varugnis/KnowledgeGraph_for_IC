@@ -174,7 +174,7 @@ def slide1(prs):
     # 副标题信息
     add_text(s, "知识图谱课程作业", 1.2, 3.75, 11, 0.5,
              size=18, color=C_LIGHT, align=PP_ALIGN.CENTER)
-    add_text(s, "小组成员：成员A  ·  成员B  ·  成员C", 1.2, 4.35, 11, 0.5,
+    add_text(s, "小组成员：蒋航  ·  漆宇杰  ·  李嘉辉", 1.2, 4.35, 11, 0.5,
              size=16, color=C_LIGHT, align=PP_ALIGN.CENTER)
     add_text(s, "2026 年 5 月", 1.2, 4.9, 11, 0.5,
              size=16, color=C_GRAY, align=PP_ALIGN.CENTER)
@@ -219,7 +219,7 @@ def slide2(prs):
     # 右列：任务目标
     card(s, 6.7, 1.35, 6.3, 5.65, "三大任务目标")
     for i, (num, title, desc, col) in enumerate([
-        ("01", "图谱构建", "构建半导体知识图谱\n≥110实体、≥318三元组\n8类实体、16类关系", C_ACCENT),
+        ("01", "图谱构建", "构建半导体知识图谱\n≥111实体、≥318三元组\n8类实体、16类关系", C_ACCENT),
         ("02", "知识推理", "实现规则推理（Horn规则）\n和路径推理（BFS多跳）\n补全隐含知识、发现证据链", C_ACCENT2),
         ("03", "大模型增强", "GraphRAG：图谱子图检索\n注入Prompt，对比有无KG\n的准确性与幻觉差异", C_GREEN),
     ]):
@@ -242,7 +242,7 @@ def slide3(prs):
     slide_header(s, "知识图谱 Schema 设计", "8类实体 · 16类关系")
 
     etype_data = [
-        ("Company",      "15", C_ACCENT,   "Intel / TSMC / NVIDIA"),
+        ("Company",      "16", C_ACCENT,   "Intel / TSMC / NVIDIA / SMIC"),
         ("Chip",         "28", C_ACCENT2,  "H100 / A17 Pro / 骁龙8 Gen 3"),
         ("ProcessNode",  "10", C_GREEN,    "TSMC 3nm / Intel 4 / SMIC N+1"),
         ("Architecture", " 8", RGBColor(0x8E,0x44,0xAD), "Zen4 / Raptor Cove / Cortex-X4"),
@@ -282,7 +282,7 @@ def slide4(prs):
         ("①\n公开资料", "官网规格\n行业媒体\n技术白皮书", C_ACCENT),
         ("②\nSchema\n设计", "8类实体\n16类关系\n约束规则", C_ACCENT2),
         ("③\n人工\n整理", "entities.csv\ntriples.csv\n置信度标注", C_GREEN),
-        ("④\nbuild_kg\n.py", "NetworkX\nMultiDiGraph\n110节点/318边", RGBColor(0x8E,0x44,0xAD)),
+        ("④\nbuild_kg\n.py", "NetworkX\nMultiDiGraph\n111节点/318边", RGBColor(0x8E,0x44,0xAD)),
         ("⑤\n存储\n输出", "kg_data.json\ntriples.csv\nHTML可视化", C_YELLOW),
     ]
     for i, (step, detail, col) in enumerate(steps):
@@ -299,10 +299,10 @@ def slide4(prs):
     add_divider(s, 4.38)
 
     # 图谱规模数据
-    add_text(s, "图谱规模（满足作业要求）", 0.4, 4.5, 12, 0.45,
+    add_text(s, "图谱规模", 0.4, 4.5, 12, 0.45,
              size=14, bold=True, color=C_ACCENT)
     metrics = [
-        ("110", "个实体", C_ACCENT),
+        ("111", "个实体", C_ACCENT),
         ("318", "条三元组", C_ACCENT2),
         ("  8", "类实体类型", C_GREEN),
         (" 16", "类关系类型", C_YELLOW),
@@ -337,7 +337,8 @@ def slide5(prs):
         ("(H100, used_for, AI训练)",                    C_GREEN),
         ("(TSMC 3nm, successor_of, TSMC 4nm)",         C_YELLOW),
         ("(A17 Pro, uses_process, TSMC 3nm)",          C_ACCENT),
-        ("(Kirin9000S, uses_process, SMIC N+1) [0.9]", C_ACCENT2),
+        ("(SMIC, fabricates, Kirin 9000S)",              C_ACCENT2),
+        ("(Kirin9000S, uses_process, SMIC N+1)",         C_ACCENT2),
         ("(EUV光刻, enables_process, TSMC 3nm)",        C_GREEN),
         ("(ASML, manufactures_tool, EUV光刻)",          C_ACCENT),
         ("(骁龙8Gen3, successor_of, 骁龙8Gen2)",        C_YELLOW),
@@ -373,9 +374,9 @@ def slide5(prs):
     # 孤立节点说明
     card(s, 6.7, 5.6, 6.3, 1.45, "图谱质量说明")
     add_multiline(s, [
-        ("最大连通分量：105/110（95.5%）", False, C_GREEN),
+        ("最大连通分量：106/111（95.5%）", False, C_GREEN),
         ("孤立节点 5 个（部分材料实体待补充关系）", False, C_YELLOW),
-        ("置信度字段显式标注争议信息", False, C_LIGHT),
+        ("新增中芯国际实体并校正代工关系", False, C_LIGHT),
     ], 6.85, 6.1, 6.0, 0.85, size=11)
 
 
@@ -408,7 +409,7 @@ def slide6(prs):
                  size=10, bold=True, color=C_GREEN)
 
     add_divider(s, 4.68, color=C_ACCENT2)
-    add_text(s, "推理结果：7条规则共推导出 104 条新三元组\n其中置信度 ≥ 0.7 者写回图谱（inferred=True）",
+    add_text(s, "推理结果：7条规则共推导出 102 条新三元组\n其中置信度 ≥ 0.7 者写回图谱（inferred=True）",
              0.4, 4.75, 5.8, 0.75, size=12, color=C_YELLOW)
 
     add_text(s, "推理样例：",
@@ -523,10 +524,10 @@ def slide8(prs):
     # 指标摘要行
     kpis = [
         ("59.0%",  "检索宏平均\n精确率",   C_ACCENT),
-        ("65.8%",  "检索宏平均\n召回率",   C_ACCENT2),
+        ("66.7%",  "检索宏平均\n召回率",   C_ACCENT2),
         ("85.7%",  "路径推理\n准确率",     C_GREEN),
         ("100%",   "幻觉检测\n准确率",     C_YELLOW),
-        ("104条",  "规则推理\n新三元组",   RGBColor(0x8E,0x44,0xAD)),
+        ("102条",  "规则推理\n新三元组",   RGBColor(0x8E,0x44,0xAD)),
     ]
     for i, (val, lab, col) in enumerate(kpis):
         lx = 0.3 + i * 2.58
@@ -544,7 +545,7 @@ def slide8(prs):
         ("Q1  H100工艺（代工厂）",  "0.60", "0.75", "0.667", C_GREEN),
         ("Q2  台积电工艺（一对多）", "0.80", "1.00", "0.889", C_GREEN),
         ("Q3  A17 Pro vs 骁龙（比较）","0.40","0.67","0.500", C_YELLOW),
-        ("Q4  麒麟9000S（争议）",   "1.00", "0.67", "0.800", C_GREEN),
+        ("Q4  麒麟9000S（代工）",   "1.00", "0.75", "0.857", C_GREEN),
         ("Q5  EUV供应商",           "0.40", "0.50", "0.444", C_YELLOW),
         ("Q6  AI训练芯片",          "0.60", "0.75", "0.667", C_GREEN),
         ("Q9  骁龙代际演进",        "1.00", "1.00", "1.000", C_GREEN),
@@ -581,53 +582,110 @@ def slide8(prs):
 
 
 # ═══════════════════════════════════════════════════════════
-# SLIDE 9 — 无KG vs 有KG 对比案例（系统演示）
+# SLIDE 9 — 案例分析（上）：成功案例 Q3 / Q4
 # ═══════════════════════════════════════════════════════════
 def slide9(prs):
     s = blank_slide(prs)
     fill_bg(s)
-    slide_header(s, "案例对比演示", "无KG基线 vs GraphRAG增强回答")
+    slide_header(s, "案例分析（上）", "多跳比较 Q3 · 代工查询 Q4")
 
-    case_items = [
-        {
-            "q":    "Q1：苹果A17 Pro 和骁龙8 Gen 3，谁的制造工艺更先进？",
-            "base": "A17 Pro可能采用3nm工艺，骁龙8 Gen 3也在4nm左右。（模糊，无确切证据）",
-            "kg":   "【KG事实】A17 Pro→TSMC 3nm ✅  /  骁龙8Gen3→TSMC 4nm(N4P) ✅\n(TSMC 3nm, successor_of, TSMC 4nm) ✅\n→ A17 Pro（3nm）更先进；置信度：高",
-        },
-        {
-            "q":    "Q5：EUV光刻技术的唯一供应商是哪家公司？",
-            "base": "ASML是EUV光刻机的供应商，对先进制程至关重要。（正确但无证据）",
-            "kg":   "【KG事实】(ASML, manufactures_tool, EUV光刻) ✅\n(EUV光刻, enables_process, TSMC 3nm/4nm/5nm) ✅\n→ ASML垄断EUV供应；具体受益工艺节点有据可查",
-        },
-        {
-            "q":    "幻觉案例：LLM声明 [Apple M3 Ultra采用Samsung 3nm GAA工艺]",
-            "base": "模型输出：M3 Ultra采用三星3nm工艺……（❌ 幻觉）",
-            "kg":   "图谱核查：(M3 Ultra, uses_process, Samsung 3nm GAA) → 不存在\n正确事实：(M3 Ultra, uses_process, TSMC 3nm(N3)) ✅\n→ 幻觉检出！Apple芯片历来由TSMC代工",
-        },
-    ]
+    # ── Q3 ──
+    card(s, 0.3, 1.32, 12.7, 2.85, "案例一：Q3 多跳比较推理")
+    add_text(s, "问题：A17 Pro 与骁龙 8 Gen 3 谁的制造工艺更先进？",
+             0.45, 1.78, 12.3, 0.32, size=11, bold=True, color=C_WHITE)
 
-    for i, c in enumerate(case_items):
-        ty = 1.4 + i * 1.96
-        add_rect(s, 0.3, ty, 12.7, 0.35, fill=C_ACCENT)
-        add_text(s, c["q"], 0.45, ty+0.04, 12.4, 0.3,
-                 size=12, bold=True, color=C_WHITE)
-        add_rect(s, 0.3, ty+0.35, 6.1, 1.4, fill=C_CARD, line=C_RED, line_w=Pt(1))
-        add_text(s, "无KG基线", 0.35, ty+0.38, 2.0, 0.3,
-                 size=10, bold=True, color=C_RED)
-        add_text(s, c["base"], 0.45, ty+0.68, 5.85, 0.9, size=10, color=C_LIGHT)
-        add_rect(s, 6.6, ty+0.35, 6.4, 1.4, fill=C_CARD, line=C_GREEN, line_w=Pt(1))
-        add_text(s, "KG增强回答", 6.65, ty+0.38, 2.5, 0.3,
-                 size=10, bold=True, color=C_GREEN)
-        add_text(s, c["kg"], 6.7, ty+0.68, 6.1, 0.9, size=10, color=C_LIGHT)
+    add_rect(s, 0.4, 2.15, 4.0, 1.85, fill=C_CARD, line=C_RED, line_w=Pt(1))
+    add_text(s, "无 KG 基线", 0.45, 2.18, 3.5, 0.28, size=10, bold=True, color=C_RED)
+    add_multiline(s, [
+        ("「可能 3nm」「4nm 左右」——模糊，无法引用", False, C_LIGHT),
+        ("未对齐具体工艺节点，多跳逻辑断裂", False, C_LIGHT),
+    ], 0.5, 2.48, 3.8, 1.4, size=9)
 
-    add_text(s, "交互演示：打开 results/kg_full.html，在图中追踪以上三元组", 0.3, 7.1, 12.7, 0.38,
-             size=11, bold=True, color=C_ACCENT, align=PP_ALIGN.CENTER)
+    add_rect(s, 4.55, 2.15, 8.3, 1.85, fill=C_CARD, line=C_GREEN, line_w=Pt(1))
+    add_text(s, "KG 增强（证据 + 推理链）", 4.6, 2.18, 7.5, 0.28, size=10, bold=True, color=C_GREEN)
+    add_multiline(s, [
+        ("(A17 Pro, uses_process, TSMC 3nm N3) ✅", False, C_WHITE),
+        ("(骁龙8 Gen3, uses_process, TSMC 4nm N4P) ✅", False, C_WHITE),
+        ("(TSMC 3nm, successor_of, TSMC 4nm) → N3 为 N4 继代", False, C_ACCENT2),
+        ("结论：A17 Pro 工艺更先进 | 置信度：高", True, C_GREEN),
+    ], 4.65, 2.45, 8.0, 1.45, size=9)
+
+    # ── Q4 ──
+    card(s, 0.3, 4.32, 12.7, 2.55, "案例二：Q4 设计 / 代工 / 工艺闭环")
+    add_text(s, "问题：麒麟 9000S 由哪家工厂生产？采用什么工艺？",
+             0.45, 4.78, 12.3, 0.32, size=11, bold=True, color=C_WHITE)
+
+    add_rect(s, 0.4, 5.12, 4.0, 1.55, fill=C_CARD, line=C_RED, line_w=Pt(1))
+    add_text(s, "无 KG 基线", 0.45, 5.15, 3.5, 0.28, size=10, bold=True, color=C_RED)
+    add_multiline(s, [
+        ("「代工厂难以确认、存在争议」", False, C_LIGHT),
+        ("未给出 designs→fabricates→uses_process 链", False, C_LIGHT),
+    ], 0.5, 5.45, 3.8, 1.1, size=9)
+
+    add_rect(s, 4.55, 5.12, 8.3, 1.55, fill=C_CARD, line=C_GREEN, line_w=Pt(1))
+    add_text(s, "KG 增强（三条三元组相互印证）", 4.6, 5.15, 7.5, 0.28, size=10, bold=True, color=C_GREEN)
+    add_multiline(s, [
+        ("(HiSilicon, designs, Kirin 9000S) — 海思设计", False, C_WHITE),
+        ("(SMIC, fabricates, Kirin 9000S) — 中芯代工", False, C_WHITE),
+        ("(Kirin 9000S, uses_process, SMIC N+1) — 约7nm级", False, C_WHITE),
+        ("结论：设计·代工·工艺一致 | 置信度：高", True, C_GREEN),
+    ], 4.65, 5.42, 8.0, 1.15, size=9)
+
+    add_text(s, "演示：results/kg_full.html 可追踪上述三元组",
+             0.3, 7.05, 12.7, 0.35, size=10, color=C_GRAY, align=PP_ALIGN.CENTER)
 
 
 # ═══════════════════════════════════════════════════════════
-# SLIDE 10 — 总结与不足
+# SLIDE 10 — 案例分析（下）：幻觉检测 M3 Ultra + 失败案例 Q10
 # ═══════════════════════════════════════════════════════════
 def slide10(prs):
+    s = blank_slide(prs)
+    fill_bg(s)
+    slide_header(s, "案例分析（下）", "幻觉检测 M3 Ultra · 检索失败 Q10")
+
+    card(s, 0.3, 1.32, 12.7, 4.35, "案例三：幻觉检测 —「M3 Ultra 采用 Samsung 3nm GAA」")
+
+    add_rect(s, 0.45, 1.78, 3.8, 0.55, fill=C_RED)
+    add_text(s, "❌ 错误 LLM 声明", 0.5, 1.82, 3.7, 0.22, size=10, bold=True, color=C_WHITE)
+    add_text(s, "Apple M3 Ultra 采用\nSamsung 3nm GAA 工艺",
+             0.5, 2.05, 3.7, 0.55, size=9, color=C_LIGHT)
+
+    add_rect(s, 4.4, 1.78, 4.5, 3.65, fill=C_CARD, line=C_YELLOW, line_w=Pt(1))
+    add_text(s, "错在哪里？", 4.5, 1.82, 4.2, 0.28, size=10, bold=True, color=C_YELLOW)
+    add_multiline(s, [
+        ("① 代工幻觉：应为 TSMC 代工，非 Samsung", False, C_WHITE),
+        ("   无 (Samsung, fabricates, M3 Ultra)", False, C_GRAY),
+        ("② 工艺张冠李戴：应为 TSMC 3nm N3", False, C_WHITE),
+        ("   非 Samsung 3nm GAA（用于 Exynos）", False, C_GRAY),
+        ("③ 角色混淆：「三星率先 3nm GAA」≠ 苹果芯片", False, C_WHITE),
+    ], 4.5, 2.12, 4.3, 3.2, size=9)
+
+    add_rect(s, 9.05, 1.78, 3.85, 3.65, fill=C_CARD, line=C_GREEN, line_w=Pt(1))
+    add_text(s, "图谱正确事实链", 9.1, 1.82, 3.7, 0.28, size=10, bold=True, color=C_GREEN)
+    add_multiline(s, [
+        ("(Apple Silicon, designs, M3 Ultra)", False, C_WHITE),
+        ("(TSMC, fabricates, M3 Ultra)", False, C_WHITE),
+        ("(M3 Ultra, uses_process, TSMC 3nm)", False, C_WHITE),
+        ("(M3 Ultra, based_on_arch, Avalanche)", False, C_LIGHT),
+        ("", False, C_WHITE),
+        ("核查：(M3 Ultra, uses_process,", False, C_LIGHT),
+        ("  Samsung 3nm GAA) → 不存在 → 幻觉", True, C_RED),
+        ("幻觉检测：8/8 正确（100%）", True, C_GREEN),
+    ], 9.1, 2.12, 3.7, 3.2, size=8)
+
+    card(s, 0.3, 5.82, 12.7, 1.15, "案例四：Q10 检索失败（跨类型召回不足）")
+    add_multiline(s, [
+        ("问题：台积电 3nm 用了哪些关键材料和技术？", False, C_WHITE),
+        ("期望：硅(M001)、氧化铪(M007)、EUV(T001)  |  实际命中：多为 P001/P002 工艺节点本身", False, C_YELLOW),
+        ("图谱中其实存在：(TSMC 3nm, uses_material, 硅)、(EUV, enables_process, TSMC 3nm) — 失败在检索，非无知识", False, C_LIGHT),
+        ("改进：实体类型加权 + 语义向量检索（报告 5.6 节）", False, C_GREEN),
+    ], 0.45, 6.22, 12.2, 0.7, size=9)
+
+
+# ═══════════════════════════════════════════════════════════
+# SLIDE 11 — 总结与不足
+# ═══════════════════════════════════════════════════════════
+def slide11(prs):
     s = blank_slide(prs)
     fill_bg(s)
     slide_header(s, "总结与不足", "工作总结 · 局限分析 · 未来方向")
@@ -636,17 +694,17 @@ def slide10(prs):
     card(s, 0.3, 1.35, 6.1, 5.5, "主要工作与成果")
     add_multiline(s, [
         ("✅  图谱构建", True, C_ACCENT),
-        ("  110实体、318三元组、8类实体、16类关系", False, C_WHITE),
+        ("  111实体、318三元组、8类实体、16类关系", False, C_WHITE),
         ("  连通率95.5%，pyvis可交互可视化", False, C_LIGHT),
         ("", False, C_WHITE),
         ("✅  知识推理", True, C_ACCENT2),
-        ("  7条Horn规则，推导104条新三元组", False, C_WHITE),
+        ("  7条Horn规则，推导102条新三元组", False, C_WHITE),
         ("  双向BFS路径推理，准确率85.7%", False, C_LIGHT),
         ("", False, C_WHITE),
         ("✅  大模型增强（GraphRAG）", True, C_GREEN),
         ("  图谱子图检索 → Prompt注入 → 对比问答", False, C_WHITE),
         ("  幻觉检测准确率100%（8/8声明）", False, C_LIGHT),
-        ("  检索宏P=59%，宏R=65.8%", False, C_LIGHT),
+        ("  检索宏P=59%，宏R=66.7%", False, C_LIGHT),
     ], 0.5, 1.88, 5.7, 4.8, size=12)
 
     # 右上：局限性
@@ -655,7 +713,6 @@ def slide10(prs):
         ("⚠  图谱覆盖不完整，5个孤立节点", False, C_YELLOW),
         ("⚠  材料类实体跨类型检索召回率低（Q10: F1=0.22）", False, C_YELLOW),
         ("⚠  竞争继承规则仅推导1条，关系链稀疏", False, C_YELLOW),
-        ("⚠  麒麟9000S代工厂信息存在争议标注不一致", False, C_YELLOW),
         ("⚠  未实现TransE等表示学习推理方法", False, C_YELLOW),
     ], 6.85, 1.85, 6.0, 2.5, size=12)
 
@@ -675,28 +732,28 @@ def slide10(prs):
 
 
 # ═══════════════════════════════════════════════════════════
-# SLIDE 11 — 小组分工
+# SLIDE 12 — 小组分工
 # ═══════════════════════════════════════════════════════════
-def slide11(prs):
+def slide12(prs):
     s = blank_slide(prs)
     fill_bg(s)
     slide_header(s, "小组分工", "三位成员各司其职，共同完成完整系统")
 
     members = [
         {
-            "name": "成员 A",
+            "name": "蒋航",
             "color": C_ACCENT,
             "tasks": [
                 "数据收集与整理",
                 "查阅芯片厂商官网、行业媒体、技术白皮书",
                 "设计 8 类实体 / 16 类关系 Schema",
                 "完成 entities.csv 与 triples.csv 建立核对",
-                "争议信息置信度标注（如麒麟9000S）",
+                "新增中芯国际实体与麒麟9000S代工关系校正",
                 "参与第二章报告撰写",
             ],
         },
         {
-            "name": "成员 B",
+            "name": "漆宇杰",
             "color": C_ACCENT2,
             "tasks": [
                 "核心代码实现",
@@ -708,7 +765,7 @@ def slide11(prs):
             ],
         },
         {
-            "name": "成员 C",
+            "name": "李嘉辉",
             "color": C_GREEN,
             "tasks": [
                 "大模型增强模块",
@@ -764,12 +821,14 @@ def main():
     slide7(prs)
     print("生成 Slide 8 — 实验结果...")
     slide8(prs)
-    print("生成 Slide 9 — 系统演示案例...")
+    print("生成 Slide 9 — 案例分析（上）Q3/Q4...")
     slide9(prs)
-    print("生成 Slide 10 — 总结与不足...")
+    print("生成 Slide 10 — 案例分析（下）幻觉/Q10...")
     slide10(prs)
-    print("生成 Slide 11 — 小组分工...")
+    print("生成 Slide 11 — 总结与不足...")
     slide11(prs)
+    print("生成 Slide 12 — 小组分工...")
+    slide12(prs)
 
     out = os.path.join(os.path.dirname(__file__), "课程PPT.pptx")
     prs.save(out)

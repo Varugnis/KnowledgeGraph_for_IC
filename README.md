@@ -10,7 +10,7 @@
 
 | 模块 | 说明 |
 |------|------|
-| **图谱构建** | 110 个实体、318 条三元组、8 类实体类型、16 类关系类型 |
+| **图谱构建** | 111 个实体、318 条三元组、8 类实体类型、16 类关系类型 |
 | **知识推理** | 规则推理（7条 Horn 规则）+ 路径推理（双向 BFS 多跳）|
 | **GraphRAG** | 图谱子图检索 → Prompt 注入 → 有/无 KG 问答对比 + 幻觉检测 |
 
@@ -29,7 +29,7 @@ KnowledgeGraph/
 │
 ├── data/
 │   └── raw/
-│       ├── entities.csv         # 110 个实体（人工整理）
+│       ├── entities.csv         # 111 个实体（人工整理）
 │       └── triples.csv          # 318 条三元组（人工整理）
 │
 ├── src/
@@ -50,10 +50,22 @@ KnowledgeGraph/
 │
 └── docs/
     ├── 课程报告.md               # 课程报告正文
-    ├── 课程PPT.pptx              # 课程汇报幻灯片（11页）
+    ├── 课程PPT.pptx              # 课程汇报幻灯片（12页）
     ├── 项目答疑纪要.md           # 常见问题整理
     └── gen_ppt.py               # PPT 生成脚本
 ```
+
+---
+
+## 生成提交材料（PPT / PDF）
+
+```bash
+pip install python-pptx
+python -X utf8 docs/gen_ppt.py              # 生成 docs/课程PPT.pptx（12页）
+python -X utf8 docs/export_submission.py  # 可选：复制 slides.pptx，尝试导出 report.pdf
+```
+
+报告 PDF 若自动导出失败，请用 Word/WPS 打开 `docs/课程报告.md` 另存为根目录 `report.pdf`。
 
 ---
 
@@ -139,7 +151,7 @@ python -X utf8 src/visualize.py
 
 | 指标 | 数值 | 作业要求 |
 |------|------|---------|
-| 实体数量 | 110 | ≥ 100 ✅ |
+| 实体数量 | 111 | ≥ 100 ✅ |
 | 三元组数量 | 318 | ≥ 300 ✅ |
 | 实体类型 | 8 类 | ≥ 3 ✅ |
 | 关系类型 | 16 类 | ≥ 3 ✅ |
@@ -206,6 +218,6 @@ python -X utf8 src/visualize.py
 
 | 成员 | 主要分工 |
 |------|---------|
-| 成员 A | 数据收集整理、Schema 设计、entities.csv / triples.csv |
-| 成员 B | build_kg.py、reasoning.py、visualize.py、图谱质量分析 |
-| 成员 C | graph_retrieval.py、llm_qa.py、evaluate.py、报告与 PPT |
+| 蒋航 | 数据收集整理、Schema 设计、entities.csv / triples.csv、报告第二章 |
+| 漆宇杰 | build_kg.py、reasoning.py、visualize.py、图谱质量分析、报告第三章 |
+| 李嘉辉 | graph_retrieval.py、llm_qa.py、evaluate.py、报告与 PPT |

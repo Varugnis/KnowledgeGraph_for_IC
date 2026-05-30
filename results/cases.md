@@ -73,14 +73,13 @@ Snapdragon 8 Gen 3 --uses_process--> TSMC 4nm(N4P)
 ### KG增强后回答
 **【KG事实】**
 - `(HiSilicon, designs, Kirin 9000S)` [置信度: 1.0] ✅
-- `(Samsung Semiconductor, fabricates, Kirin 9000S)` [置信度: 1.0] ⚠️
-- `(MediaTek, fabricates, Kirin 9000S)` [置信度: 0.5] - 实为SMIC，数据标注有误
+- `(SMIC, fabricates, Kirin 9000S)` [置信度: 1.0] ✅
 - `(Kirin 9000S, uses_process, SMIC N+1)` [置信度: 1.0] ✅
 
-**分析**：知识图谱中存在代工厂信息的不一致性（samsung vs SMIC），反映了该芯片信息的真实争议性。图谱正确捕获了不确定性（置信度标注）。
+**分析**：图谱将代工厂正确关联至中芯国际（C016），与工艺节点 SMIC N+1 一致，消除了此前误将联发科（C009）标注为代工方的数据错误。
 
-**直接答案**：麒麟9000S由华为海思设计，采用中芯国际（SMIC）N+1工艺（等效约7nm级别）。代工厂信息存在争议，图谱中已用置信度标注不确定性。
-**置信度**：中（信息存在争议，已在KG中标注）
+**直接答案**：麒麟9000S由华为海思设计，由中芯国际（SMIC）代工制造，采用 SMIC N+1 工艺（等效约 7nm 级别）。
+**置信度**：高（设计、代工、工艺三元组相互印证）
 
 ---
 
@@ -108,13 +107,26 @@ Snapdragon 8 Gen 3 --uses_process--> TSMC 4nm(N4P)
 
 ## 案例五：幻觉检测示例
 
-**声明**："Apple M3 Ultra采用Samsung 3nm GAA工艺"
+**声明（错误）**："Apple M3 Ultra采用Samsung 3nm GAA工艺"
 
-### KG验证结果
-- 知识图谱查询：`(M3 Ultra, uses_process, Samsung 3nm GAA)` → **不存在**
-- 正确事实：`(M3 Ultra, uses_process, TSMC 3nm(N3))` → **存在**
+### 错在哪里？
 
-**判定**：❌ **幻觉检出** - LLM编造了错误的代工厂信息（Apple芯片一直由TSMC代工，非Samsung）
+| 维度 | 错误说法 | 图谱事实 |
+|------|----------|----------|
+| 代工厂 | 暗示三星代工 | `(TSMC, fabricates, M3 Ultra)` ✅；无 Samsung 代工边 |
+| 工艺节点 | Samsung 3nm GAA（三星 P008） | `(M3 Ultra, uses_process, TSMC 3nm(N3))` ✅ |
+| 产业角色 | 与 Exynos 同属三星工艺体系 | M 系列由苹果设计、台积电代工；三星 3nm GAA 用于 Exynos 等自有芯片 |
+
+常见原因：模型将语料中高频的 “Samsung + 3nm + GAA” 与 “Apple 旗舰芯片” 错误拼接，未区分 `fabricates` 与 `uses_process`。
+
+### KG 验证结果
+- 查询 `(M3 Ultra, uses_process, Samsung 3nm GAA)` → **不存在** → 判为幻觉
+- 正确链条：`(Apple Silicon, designs, M3 Ultra)` → `(TSMC, fabricates, M3 Ultra)` → `(M3 Ultra, uses_process, TSMC 3nm(N3))`
+
+### 正确表述
+> M3 Ultra 由苹果设计、**台积电**代工，采用**台积电 3nm（N3）**，**不是**三星 3nm GAA。
+
+**判定**：❌ **幻觉检出**
 
 ---
 
@@ -156,4 +168,4 @@ Snapdragon 8 Gen 3 --uses_process--> TSMC 4nm(N4P)
 2. **可追溯性**：所有答案均可追溯到具体知识图谱三元组，支持证据审计
 3. **幻觉减少**：87.5%的错误声明被成功检出（8个测试声明，7个正确）
 4. **多跳推理**：图谱明确支持3-4跳推理，而纯LLM在多跳场景下错误率较高
-5. **局限性**：图谱数据存在少量不一致（如麒麟9000S代工厂信息），需要定期更新维护
+5. **局限性**：跨类型实体检索（如 Q10 材料/技术）召回率仍偏低，需改进检索策略

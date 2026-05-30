@@ -48,8 +48,8 @@ C004,fabricates,CH023,1.0,TSMC代工生产Dimensity 9200
 C004,fabricates,CH025,1.0,TSMC代工生产Kirin 9000
 C005,fabricates,CH026,1.0,Samsung代工生产Exynos 2400
 C005,fabricates,CH027,1.0,Samsung代工生产Exynos 2200
-C005,fabricates,CH024,1.0,Samsung代工生产Kirin 9000S（SMIC工艺曾报道有争议，此处标注Samsung）
-C009,fabricates,CH024,0.5,中芯国际(SMIC)代工生产Kirin 9000S（部分来源）
+C016,fabricates,CH024,1.0,中芯国际代工生产麒麟9000S（主流公开报道）
+C016,uses_technology,T002,0.85,中芯国际量产工艺依赖DUV光刻与多重图案化技术
 C001,fabricates,CH001,1.0,Intel自产Core i9-14900K
 C001,fabricates,CH002,1.0,Intel自产Core i7-13700K
 C001,fabricates,CH003,1.0,Intel自产Xeon W9-3595X
